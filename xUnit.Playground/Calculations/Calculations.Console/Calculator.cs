@@ -8,7 +8,8 @@ namespace Calculations.ConsoleApp
 {
     public class Calculator
     {
-        public List<int> FiboNumbers { get => new List<int>() { 1, 1, 2, 3, 5, 8, 13 }; }
+        public List<int> FiboNumbers { get => new List<int>() { 1, 1, 2, 3, 5, 8, 13 };}
+        public int Name { get; private set; }
         public int Add(int a, int b)
         {
             return a + b;

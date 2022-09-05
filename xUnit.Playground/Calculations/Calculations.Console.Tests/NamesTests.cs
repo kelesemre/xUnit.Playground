@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
+﻿using Xunit;
+using System;
 
 namespace Calculations.ConsoleApp.Tests
 {
@@ -17,7 +13,6 @@ namespace Calculations.ConsoleApp.Tests
             Assert.Equal("emre keles", result, ignoreCase: true);
             Assert.Contains("mre", result, StringComparison.InvariantCultureIgnoreCase);
             Assert.StartsWith("emr", result);
-            // Assert.Matches();
         }
 
         [Fact]

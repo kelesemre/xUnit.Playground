@@ -5,9 +5,14 @@ using Xunit.Abstractions;
 
 namespace Calculations.ConsoleApp.Tests
 {
-    public class CalculatorFixture
+    public class CalculatorFixture:IDisposable
     {
         public Calculator calculator => new Calculator();
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class CalculatorTests : IClassFixture<CalculatorFixture>

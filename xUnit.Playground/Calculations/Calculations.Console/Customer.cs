@@ -19,6 +19,14 @@ namespace Calculations.ConsoleApp
             }
             return 100;
         }
+        public virtual int GetOrdersByName2(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new Exception("OnlyException");
+            }
+            return 100;
+        }
         public string GetFullName(string firstName, string lastName)
         {
             return $"{firstName} {lastName}";

@@ -1,0 +1,25 @@
+Assert.Equal(1,2)
+Assert.Equal(true,isFemale);
+Assert.Contains(13, calc.FiboNumbers);
+Assert.DoesNotContain(4, calc.FiboNumbers);
+Assert.Equal("emre keles", result, ignoreCase: true);
+Assert.Contains("mre", result, StringComparison.InvariantCultureIgnoreCase);
+Assert.StartsWith("emr", result);
+Assert.Null(names.NickName); // very that objects reference is null
+Assert.NotNull(result);
+Assert.False(string.IsNullOrEmpty(result));
+Assert.All(calc.FiboNumbers, n => Assert.NotEqual(0, n));
+Assert.Equal(expectedList, calc.FiboNumbers);  --> comparing of two collection identical
+Assert.InRange(customer.Age, 25, 40);
+public static T IsType<T>(object @object)
+Assert.Istype(typeOf(Customer), aCustomer);
+ var loyalCustomer = Assert.IsType<LoyalCustomer>(customer); // return The object, casted to type T when successful
+
+---Exceptions---
+Assert.Throws<Exception>(() => customer.GetOrdersByName2(null)); // if an error happens the test passes
+
+---Collection& Traits---
+*Grouping is done via [Trait] attribute
+*Text Explorer -> groupByTrait options
+
+
