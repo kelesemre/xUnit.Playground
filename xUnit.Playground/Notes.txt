@@ -1,4 +1,6 @@
 Assert.Equal(1,2)
+Assert.True(val)
+Assert.False(val)
 Assert.Equal(true,isFemale);
 Assert.Contains(13, calc.FiboNumbers);
 Assert.DoesNotContain(4, calc.FiboNumbers);
@@ -21,5 +23,24 @@ Assert.Throws<Exception>(() => customer.GetOrdersByName2(null)); // if an error 
 ---Collection& Traits---
 *Grouping is done via [Trait] attribute
 *Text Explorer -> groupByTrait options
+----------------------------------------------------------------------------------------------------------------
+        [IsOddData]   // it can be used many places , provides predefined test values instead of using [InlineData(1, true)] and 
+        public void IsOdd_TestOddAndEven(int value, bool expected)
+        {
+            var calc = new Calculator();
+            var result = calc.IsOdd(value);
+            _testOutputHelper.WriteLine(result.ToString());
 
+            Assert.Equal(result, expected);
+        }
 
+ public class IsOddDataAttribute : DataAttribute
+    {
+        public override IEnumerable<object[]> GetData(MethodInfo testMethod)
+        {
+            yield return new object[] { 1, true };
+            yield return new object[] { 2, false };
+        }
+    }
+----------------------------------------------------------------------------------------------------------------
+PASSING PARAMETER TO UNIT TESTS FROM EXTERNAL RESOURCES

@@ -5,13 +5,13 @@ using Xunit.Abstractions;
 
 namespace Calculations.ConsoleApp.Tests
 {
-    public class CalculatorFixture:IDisposable
+    public class CalculatorFixture : IDisposable
     {
         public Calculator calculator => new Calculator();
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+
         }
     }
 
@@ -79,7 +79,8 @@ namespace Calculations.ConsoleApp.Tests
         [Theory]
         //[InlineData(1, true)]
         //[InlineData(4, false)]
-        //[MemberData(nameof(TestDataShare.IsOddOrEvenData), MemberType = typeof(TestDataShare))]
+        //[MemberData(nameof(TestDataShare.IsOddOrEvenData), MemberType = typeof(TestDataShare))]  //-> this can be used various test methods.
+        //[MemberData(nameof(TestDataShare.IsOddOrEvenExternalData), MemberType = typeof(TestDataShare))]  //-> this can be used various test methods.
         [IsOddData]   // it can be used many places
         public void IsOdd_TestOddAndEven(int value, bool expected)
         {
