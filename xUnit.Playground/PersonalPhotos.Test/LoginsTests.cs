@@ -28,7 +28,7 @@ namespace PersonalPhotos.Test
             _accessor.Setup(x => x.HttpContext).Returns(httpContext);
 
             _controller = new LoginsController(_logins.Object, _accessor.Object);
-        }
+        } 
 
         [Fact]
         public void Index_GivenNorReturnUrl_ReturnLoginView()

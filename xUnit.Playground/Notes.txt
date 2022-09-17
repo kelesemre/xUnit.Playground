@@ -44,4 +44,9 @@ Assert.Throws<Exception>(() => customer.GetOrdersByName2(null)); // if an error 
     }
 ----------------------------------------------------------------------------------------------------------------
 PASSING PARAMETER TO UNIT TESTS FROM EXTERNAL RESOURCES
+----------------------------------------------------------------------------------------------------------------
+UNIT TEST COVERAGE 
+add test csproj file to this line of code: <PackageReference Include="coverlet.msbuild" Version="2.6.1" />
+locate to test project on command line.
+jsut type :dotnet test /p:CollectCoverage=true and see the table which shows coverage percentages.
 
